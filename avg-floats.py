@@ -1,6 +1,5 @@
 import os
 
-#file_path = r'/Users/sunilmoriya/Desktop/mbox-short.rtf'
 file_path = input("Enter input file path: ")
 search_item = r'X-DSPAM-Confidence'
 
@@ -22,7 +21,5 @@ for element in mylist:  # Iterate list to get sum
     addition += element
 
 avg = float(addition/total_lines)
-
 print("Total lines with {} in input file are: {}".format(search_item, total_lines))
-
 print("Average of all float values is: {}".format(avg))
