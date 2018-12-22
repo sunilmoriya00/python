@@ -1,7 +1,7 @@
 import os
 
-#file_path = r'<file-path mbox-short.rtf>'
-file_path = input("Enter input file path: ")  #provide file path and if this give error then comment this line uncomment 
+#file_path = r'/Users/sunilmoriya/Desktop/mbox-short.rtf'
+file_path = input("Enter input file path: ")
 search_item = r'X-DSPAM-Confidence'
 
 mylist = [] #Empty list to accumulate all the float data
@@ -18,11 +18,11 @@ with open(file_path,'r') as f1:     #Open file in read only mode
             final_data = float(data2[-1]) # convert data to float
             mylist.append(final_data)       #Add output data to list
 
-    for element in mylist:  # Iterate list to get addition of all float values
-        addition += element
+for element in mylist:  # Iterate list to get sum
+    addition += element
 
-    avg = float(addition/total_lines)
+avg = float(addition/total_lines)
 
-    print("Total lines with {} in input file are: {}".format(search_item, total_lines))
+print("Total lines with {} in input file are: {}".format(search_item, total_lines))
 
-    print("Average of all float values is: {}".format(avg))
+print("Average of all float values is: {}".format(avg))
