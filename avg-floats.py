@@ -14,7 +14,7 @@ with open(file_path,'r') as f1:     #Open file in read only mode
             total_lines = total_lines + 1  #Get total count of lines where search_item is present
             data1 = item.strip("\\")    #remove \\ from output
             data2 = data1.split(":")    #Separate data based on ':'
-            final_data = float(data2[-1]) # convert data to float
+            final_data = float(data2[-1]) # get last item (all values after ':') from the list and convert it to float type
             mylist.append(final_data)       #Add output data to list
 
 for element in mylist:  # Iterate list to get sum
